@@ -8,8 +8,17 @@
 (function main() {
   'use strict'; // Demande un interprétation stricte du code
 
-  let a = 'Bonjour';
+  const celcius = prompt("Température en C° : ");
 
-  console.log(a);
+  function celciusToFah(cel) {
+      if (isNaN(cel)) {
+        return prompt("Veuillez insérer un nombre.");
+      } else {
+        let fah = (cel * 9 / 5) + 32;
+        return alert(`Degrés en Fahrenheit : , ${fah} , .`);
+      }
+  }
+
+  celciusToFah(celcius);
 }()); // Main IIFE
 
